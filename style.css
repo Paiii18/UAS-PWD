@@ -1,0 +1,140 @@
+body {
+    text-align: center;
+    background-color: lightgray;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.frame {
+    border: 2px solid gray; /* Menambahkan border luar di sekeliling frameset */
+}
+
+.judul {
+    font-size: 50px;
+}
+
+.judul-menu {
+    font-weight: bold;
+    font-size: 35px; /* Updated font size for consistency */
+}
+
+.container {
+    display: inline-block;
+    text-align: left;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.form-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.form-label {
+    width: 80px;
+    margin-right: 50px;
+    font-weight: bold;
+}
+
+.form-input {
+    flex: 1;
+    padding: 8px;
+    box-sizing: border-box;
+    display: flex;
+    max-width: 50vh;
+}
+
+.form-textarea {
+    flex: 100;
+    padding: 8px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Set width to 100% for full width */
+    max-width: 100vh; 
+}
+
+.form-textarea {
+    resize: vertical;
+}
+
+.form-button {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+    width: 100vh;
+}
+
+.form-button:hover {
+    background-color: #45a049;
+}
+
+.body_menu {
+    text-align: center;
+    background-color: lightgray;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+.body_header {
+    background-color: rgb(119, 175, 238);
+}
+.body_menu {
+    text-align: center;
+    background-color: lightgray;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.header-container {
+    text-align: center;
+}
+
+.logo {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px; /* Sesuaikan dengan margin yang diinginkan */
+}
+
+.title-address {
+    font-size: 16px; /* Updated font size for consistency */
+    color: black;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+table {
+    margin-top: 20px;
+    border-collapse: collapse;
+    width: 60%;
+}
+
+td {
+    border: 1px solid black; /* Mengubah ketebalan border */
+    padding: 8px;
+    text-align: center;
+    background-color: rgb(189, 3, 3);
+    color: white;
+    border-bottom: 1px solid black; /* Menambahkan border bawah */
+}
+
+.output-table {
+    margin-top: 20px;
+}

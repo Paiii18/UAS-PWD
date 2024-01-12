@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Kalkulator Gaji Karyawan</h1>
+
+    <div id="hasil"></div>
+</body>
+<script>
+  function hitungGaji() {
+      // Meminta input menggunakan prompt
+      var jumlahJamKerja = parseFloat(prompt("Masukkan Jumlah Jam Kerja:"));
+      var tarifPerJam = parseFloat(prompt("Masukkan Tarif Per Jam (Rp):"));
+
+      // Memastikan input valid
+      if (isNaN(jumlahJamKerja) || isNaN(tarifPerJam)) {
+          alert("Input tidak valid. Harap masukkan angka.");
+          return;
+      }
+
+      // Menghitung gaji
+      var gaji = 0;
+      if (jumlahJamKerja <= 40) {
+          gaji = jumlahJamKerja * tarifPerJam;
+      } else {
+          // Jika jam kerja lebih dari 40, hitung gaji dengan tambahan lembur
+          gaji = (40 * tarifPerJam) + ((jumlahJamKerja - 40) * 1.5 * tarifPerJam);
+      }
+
+      // Menampilkan hasil di dalam body
+      var hasil = "Jumlah Jam Kerja: " + jumlahJamKerja + " Jam<br>" +
+          "Tarif Per Jam: Rp " + tarifPerJam.toFixed() + "<br>" +
+          "Gaji: Rp " + gaji + " bulan<br>";
+
+      document.getElementById('hasil').innerHTML = hasil;
+  }
+
+  // Panggil fungsi hitungGaji saat halaman dibuka
+  window.onload = function () {
+      hitungGaji();
+  };
+</script>
+</html>

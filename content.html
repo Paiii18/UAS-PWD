@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>content</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body bgcolor="lightgray" class="body_menu">
+    <span class="judul"><b>Input Data Mahasiswa</b></span>
+    <div class="container">
+        <form id="studentForm">
+            <div class="form-row">
+                <label class="form-label" for="npm">NPM:</label>
+                <input class="form-input" type="text" id="npm" name="npm" required>
+            </div>
+            <div class="form-row">
+                <label class="form-label" for="name">Nama:</label>
+                <input class="form-input" type="text" id="name" name="name" required>
+            </div>
+            <div class="form-row">
+                <label class="form-label" for="alamat">Alamat:</label>
+                <textarea class="form-textarea" id="alamat" name="alamat" rows="4"></textarea>
+            </div>
+            <button class="form-button" type="button" onclick="showOutput()">Submit</button>
+        </form>
+
+        <!-- Output Table -->
+        <div id="outputTable" class="output-table"></div>
+    </div>
+
+    <script>
+        function showOutput() {
+            // Get input values
+            var npmValue = document.getElementById('npm').value;
+            var nameValue = document.getElementById('name').value;
+
+            // Create output table
+            var outputTable = document.getElementById('outputTable');
+            outputTable.innerHTML = `
+                <table border="1" cellpadding="10" cellspacing="0">
+                    <tr>
+                        <td style="color: red;">NPM</td>
+                        <td style="color: red;">${npmValue}</td>
+                    </tr>
+                    <tr>
+                        <td style="color: yellow;">Nama</td>
+                        <td style="color: yellow;">${nameValue}</td>
+                    </tr>
+                    <tr>
+                        <td style="color: green;">Hasil Inputan NPM</td>
+                        <td style="color: green;">${getRandomColor()}</td>
+                    </tr>
+                </table>
+            `;
+        }
+
+        function getRandomColor() {
+            var colors = ["#FF0000", "#FFFF00", "#008000"]; // Red, Yellow, Green
+            return colors[Math.floor(Math.random() * colors.length)];
+        }
+    </script>
+</body>
+</html>
